@@ -8,3 +8,11 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

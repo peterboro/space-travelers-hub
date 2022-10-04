@@ -55,6 +55,7 @@ const rocketsSlice = createSlice({
           name: rocket.rocket_name,
           description: rocket.description,
           flickrImages: rocket.flickr_images,
+          wikipedia: rocket.wikipedia,
           reserved: false,
         })),
       }));
