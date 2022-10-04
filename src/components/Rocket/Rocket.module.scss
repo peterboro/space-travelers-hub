@@ -25,20 +25,29 @@
   font-size: 1rem;
 }
 
-.btn-reserve {
-  background-color: $primaryBtnBlue;
-  border: none;
-  padding: 0.6rem 1rem;
-  color: $white;
+button {
   border-radius: 0.4rem;
   cursor: pointer;
 }
 
+.btn-reserve {
+  background-color: $primaryBtnBlue;
+  padding: 0.6rem 1rem;
+  border: none;
+  color: $white;
+}
+
 .btn-unreserve {
   background-color: $white;
+  padding: 0.4rem 1.8rem;
   border: 0.1rem solid $gray;
-  padding: 0.6rem 1rem;
   color: $gray;
-  border-radius: 0.4rem;
-  cursor: pointer;
+}
+
+.reserved-tag {
+  padding: 0.1rem;
+  background-color: $reservedTag;
+  color: $white;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
 }

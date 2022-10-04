@@ -27,7 +27,7 @@ const RocketView = () => {
                 id={id}
                 name={name}
                 description={description}
-                flickrImages={flickrImages}
+                flickrImages={flickrImages[0]}
                 reserved={reserved}
               />
             </li>
