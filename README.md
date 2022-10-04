@@ -61,6 +61,12 @@ In order to obtain a local copy of this repository run:
 - Twitter: [@twitterHandle](address)
 - LinkedIn: [@linkedInHandle](address)
 
+👤 **Desta Legesse Wubishet**
+
+- GitHub: [@peterboro](https://github.com/peterboro)
+- Twitter: [@twitterHandle](address)
+- LinkedIn: [@linkedInHandle](address)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
