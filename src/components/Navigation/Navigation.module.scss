@@ -1,0 +1,18 @@
+@import '../../styles/variables';
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav ul li {
+  margin: 0 1rem;
+}
+
+.nav ul li a {
+  font-size: 0.8rem;
+  color: $linkBlue;
+}

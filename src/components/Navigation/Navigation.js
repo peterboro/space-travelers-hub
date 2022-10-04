@@ -1,11 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import style from './Navigation.module.scss';
 
 const Navigation = () => {
   const activeStyle = { textDecoration: 'underline' };
 
   return (
-    <nav>
+    <nav className={style.nav}>
       <ul>
         <li>
           <NavLink
@@ -24,7 +25,12 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink>Profile</NavLink>
+          <NavLink
+            to="/myprofile"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Profile
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,35 @@
+@import '../../styles/variables';
+
+.rocket {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.rocket img {
+  width: 20%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-family: $montserrat;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.btn-reserve {
+  background-color: $primaryBtnBlue;
+  border: none;
+  padding: 0.6rem 1rem;
+  color: $white;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
