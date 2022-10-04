@@ -27,6 +27,7 @@ const rocketsSlice = createSlice({
           name: rocket.rocket_name,
           description: rocket.description,
           flickrImages: rocket.flickr_images,
+          reserved: false,
         })),
       }));
     builder.addCase(fetchRocketsThunk.rejected, (state, action) => (

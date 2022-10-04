@@ -18,7 +18,7 @@ const RocketView = () => {
       <ul className={style['rockets-list']}>
         { rockets.list.length ? rockets.list.map((rocket) => {
           const {
-            id, name, description, flickrImages,
+            id, name, description, flickrImages, reserved,
           } = rocket;
 
           return (
@@ -28,6 +28,7 @@ const RocketView = () => {
                 name={name}
                 description={description}
                 flickrImages={flickrImages}
+                reserved={reserved}
               />
             </li>
           );
