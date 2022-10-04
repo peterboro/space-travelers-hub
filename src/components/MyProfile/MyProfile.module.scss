@@ -1,0 +1,51 @@
+@import '../../styles/variables';
+
+.profile {
+  display: flex;
+  justify-content: stretch;
+  font-size: 1rem;
+  gap: 2rem;
+}
+
+.category {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+ul > li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+ul span {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-unreserve {
+  background-color: $white;
+  padding: 0.4rem 1.8rem;
+  border: 0.1rem solid $gray;
+  color: $gray;
+  margin-left: auto;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn-more {
+  padding: 0.2rem 0.4rem;
+  background-color: $primaryBtnBlue;
+  color: $white;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}

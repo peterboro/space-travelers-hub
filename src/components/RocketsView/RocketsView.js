@@ -1,24 +1,17 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchRocketsThunk } from '../../redux/rockets/rockets';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Rocket from '../Rocket/Rocket';
-// import Spinner from '../Spinner/Spinner';
 import style from './RocketsView.module.scss';
 
 const RocketView = () => {
   const rockets = useSelector((state) => state.rockets);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRocketsThunk());
-  }, []);
 
   return (
     <section className={style['rockets-container']}>
       <ul className={style['rockets-list']}>
         { rockets.list.length ? rockets.list.map((rocket) => {
           const {
-            id, name, description, flickrImages,
+            id, name, description, flickrImages, reserved,
           } = rocket;
 
           return (
@@ -27,11 +20,17 @@ const RocketView = () => {
                 id={id}
                 name={name}
                 description={description}
-                flickrImages={flickrImages}
+                flickrImages={flickrImages[0]}
+                reserved={reserved}
               />
             </li>
           );
-        }) : <p>Loading data...</p> }
+        }) : (
+          <div className={style.loader}>
+            <img src={`${process.env.PUBLIC_URL}images/spinner.gif`} alt="Spinning loader" />
+            <p>Data is currently loading. Please wait...</p>
+          </div>
+        ) }
       </ul>
     </section>
   );
