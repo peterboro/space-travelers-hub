@@ -4,6 +4,7 @@ import {
 import Header from './components/Header/Header';
 import RocketsView from './components/RocketsView/RocketsView';
 import MissionsView from './components/MissionsView/MissionsView';
+import DragonsView from './components/DragonsView/DragonsView';
 import MyProfile from './components/MyProfile/MyProfile';
 
 const App = () => (
@@ -20,11 +21,13 @@ const App = () => (
       </Route>
       <Route
         path="/missions"
-        element={(
-          <ul>
-            <li key="uidrisd"><MissionsView /></li>
-          </ul>
-        )}
+        element={<MissionsView />}
+      >
+        Rockets
+      </Route>
+      <Route
+        path="/dragons"
+        element={<DragonsView />}
       >
         Rockets
       </Route>

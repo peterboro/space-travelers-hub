@@ -26,6 +26,14 @@ const Navigation = () => {
         </li>
         <li>
           <NavLink
+            to="/dragons"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Dragons
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/myprofile"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
