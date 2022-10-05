@@ -7,7 +7,7 @@ const RocketView = () => {
   const rockets = useSelector((state) => state.rockets);
 
   return (
-    <section className={style['rockets-container']}>
+    <section className={style['rockets-container']} data-testid="rockets-container">
       <ul className={style['rockets-list']}>
         { rockets.list.length ? rockets.list.map((rocket) => {
           const {
