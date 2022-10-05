@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { fetchRocketsThunk } from './redux/rockets/rockets';
+import { fetchDragons } from './redux/dragons/dragons';
 import Header from './components/Header/Header';
 import RocketsView from './components/RocketsView/RocketsView';
 import Mission from './components/Mission/Mission';
@@ -15,6 +16,7 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchRocketsThunk());
+    dispatch(fetchDragons());
   }, []);
 
   return (
