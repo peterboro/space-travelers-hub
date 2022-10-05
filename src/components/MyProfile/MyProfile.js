@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { unbookRocket } from '../../redux/rockets/rockets';
+import { unbookDragon } from '../../redux/dragons/dragons';
 import style from './MyProfile.module.scss';
 
 const MyProfile = () => {
   const rockets = useSelector((state) => state.rockets.list).filter((rocket) => rocket.reserved);
+  const dragons = useSelector((state) => state.dragons.list).filter((dragon) => dragon.reserved);
   const dispatch = useDispatch();
 
   return (
@@ -37,8 +39,19 @@ const MyProfile = () => {
       <div className={style.category}>
         <h2>My Dragons</h2>
         <ul>
-          <li>Dragon 1</li>
-          <li>Dragon 2</li>
+          {dragons.length ? dragons.map((dragon) => (
+            <li key={dragon.id} id={dragon.id}>
+              <span>{ dragon.name }</span>
+              <button
+                type="button"
+                className={style['btn-unreserve']}
+                onClick={() => dispatch(unbookDragon(dragon.id))}
+              >
+                Cancel Reservation
+              </button>
+              <a href={dragon.wikipedia} className={style['btn-more']}>More</a>
+            </li>
+          )) : <li>There is no booked dragon</li> }
         </ul>
       </div>
     </section>

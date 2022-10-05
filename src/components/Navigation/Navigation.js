@@ -1,9 +1,12 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchDragons } from '../../redux/dragons/dragons';
 import style from './Navigation.module.scss';
 
 const Navigation = () => {
   const activeStyle = { textDecoration: 'underline' };
+  const dispatch = useDispatch();
 
   return (
     <nav className={style.nav}>
@@ -27,6 +30,7 @@ const Navigation = () => {
         <li>
           <NavLink
             to="/dragons"
+            onClick={dispatch(fetchDragons())}
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
           >
             Dragons
