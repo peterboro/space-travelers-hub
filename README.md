@@ -63,9 +63,9 @@ In order to obtain a local copy of this repository run:
 
 👤 **Desta Legesse Wubishet**
 
-- GitHub: [@peterboro](https://github.com/peterboro)
-- Twitter: [@twitterHandle](address)
-- LinkedIn: [@linkedInHandle](address)
+- GitHub: [@peterboro](https://github.com/dlwub)
+- Twitter: [@twitterHandle](https://twitter.com/DestaWubishet)
+- LinkedIn: [@linkedInHandle](linkedin.com/in/desta-legesse-w-509844213/)
 
 ## 🤝 Contributing
 
