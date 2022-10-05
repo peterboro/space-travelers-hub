@@ -1,51 +1,51 @@
 @import '../../styles/variables';
+
 .dragon-container {
-	display: flex;
-	gap: 1.6rem;
-	padding-bottom: 2rem;
+  display: flex;
+  gap: 1.6rem;
+  padding-bottom: 2rem;
 }
 
 .dragon-container img {
-	height: 20vh;
-	width: 20%;
-	border-radius: 0.4rem;	
+  height: 20vh;
+  width: 20%;
+  border-radius: 0.4rem;
 }
 
 .name-type-container {
-	display: flex;
-	flex-direction: column;
-	font-family: $montserrat;
-	font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: $montserrat;
+  font-size: 2rem;
 }
 
 .type {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .btn-reserve {
-	background-color: $primaryBtnBlue;
-	padding: 0.6rem 1rem;
-	border: none;
-	color: $white;
-	margin-top: 1.5rem;
+  background-color: $primaryBtnBlue;
+  padding: 0.6rem 1rem;
+  border: none;
+  color: $white;
+  margin-top: 1.5rem;
 }
 
 .btn-unreserve {
-	background-color: $white;
-	padding: 0.4rem 1rem;
-	border: 0.1rem solid $gray;
-	color: $gray;
-	margin-top: 1rem;
+  background-color: $white;
+  padding: 0.4rem 1rem;
+  border: 0.1rem solid $gray;
+  color: $gray;
+  margin-top: 1rem;
 }
 
 .reserved-tag {
-	padding: 0.1rem;
-	background-color: $reservedTag;
-	color: $white;
-	font-size: 0.8rem;
-	font-weight: 600;
-	width: 4rem;
-	border-radius: 0.3rem;
-	border: none;
+  padding: 0.1rem;
+  background-color: $reservedTag;
+  color: $white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 4rem;
+  border-radius: 0.3rem;
+  border: none;
 }
-

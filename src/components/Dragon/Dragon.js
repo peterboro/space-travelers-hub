@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import style from './Dragon.module.scss';
 import { bookDragon, unbookDragon } from '../../redux/dragons/dragons';
-// import style from './Dragon.module.scss';
 
 const Dragon = (props) => {
   const {
