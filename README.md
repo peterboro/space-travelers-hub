@@ -1,10 +1,11 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e6847a02-055a-4bae-93e4-f894dfcb91a3/deploy-status)](https://app.netlify.com/sites/space-travellers-hub-desta-eva-peter/deploys)
 
 # Space Travelers Hub
 
 ## Description
 
-> A description will follow as soon as we'll get a hang of the project
+> Come book a rocket, join a mission or reserve your very dragon here! Our spaceships going to stars and beyond are ready to take you in your life's jorney. A project for any space lover!
 
 ## Built With
 
@@ -35,13 +36,13 @@ In order to obtain a local copy of this repository run:
 
 - You can run test suites on this project by running `npm test`
 
-<!-- ## Live Demo -->
+## Live Demo
 
-<!-- [Live Demo Link](https://bucureva87.github.io/cinema/dist/) -->
+[Live Demo Link](https://deploy-preview-29--space-travellers-hub-desta-eva-peter.netlify.app/)
 
-<!-- ## Live Preview -->
+## Live Preview
 
-<!-- ![Live Preview](https://i.postimg.cc/cHncpKLv/Screenshot-from-2022-09-07-22-28-09.png) -->
+![Live Preview](https://i.postimg.cc/RhPr7nqj/Screenshot-from-2022-10-05-12-01-35.png)
 
 <!-- ## Project video -->
 
@@ -58,14 +59,13 @@ In order to obtain a local copy of this repository run:
 👤 **Peter Njuguna**
 
 - GitHub: [@peterboro](https://github.com/peterboro)
-- Twitter: [@twitterHandle](address)
-- LinkedIn: [@linkedInHandle](address)
+- LinkedIn: [Peter Njuguna](https://www.linkedin.com/in/peter-n-3bb940122/)
 
 👤 **Desta Legesse Wubishet**
 
-- GitHub: [@peterboro](https://github.com/peterboro)
-- Twitter: [@twitterHandle](address)
-- LinkedIn: [@linkedInHandle](address)
+- GitHub: [@dlwub](https://github.com/dlwub)
+- Twitter: [@DestaWubishet](https://twitter.com/DestaWubishet)
+- LinkedIn: [Desta Legesse Wubishet](linkedin.com/in/desta-legesse-w-509844213/) 
 
 ## 🤝 Contributing
 
