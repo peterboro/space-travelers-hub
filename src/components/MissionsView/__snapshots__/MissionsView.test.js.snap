@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission Component Does the mission render correctly? 1`] = `
+<tr>
+  <th
+    className="text-dark"
+    scope="row"
+  >
+    Iridium NEXT
+  </th>
+  <td
+    className="w-50 text-dark"
+  >
+    A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd
+  </td>
+  <td>
+    <span
+      className="badge rounded-pill bg-primary"
+    >
+      Not a Member
+    </span>
+  </td>
+  <td>
+    <button
+      className="btn btn-outline-primary btn-sm"
+      onClick={[Function]}
+      type="button"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;

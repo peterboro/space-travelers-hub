@@ -25,18 +25,18 @@ const MissionsView = ({
             status
               ? (
                 <button
-                  type="button"
                   className="btn btn-outline-warning btn-sm"
                   onClick={() => dispatch(leaveMission(id))}
+                  type="button"
                 >
-                  Leave mission
+                  Leave Mission
                 </button>
               )
               : (
                 <button
-                  type="button"
                   className="btn btn-outline-primary btn-sm"
                   onClick={() => dispatch(joinMission(id))}
+                  type="button"
                 >
                   Join Mission
                 </button>
