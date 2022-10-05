@@ -17,6 +17,7 @@ const MyProfile = () => {
           { reservedMissions.map((mission) => (
             <li key={mission.mission_id}>
               <span>{mission.mission_name}</span>
+              <a href={mission.wikipedia} className={style['btn-more']}>More</a>
             </li>
           ))}
         </ul>

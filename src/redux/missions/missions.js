@@ -21,7 +21,7 @@ const missions = (state = initialState, action) => {
   }
 };
 
-export const getMissionsSuccess = (id) => ({
+export const getMission = (id) => ({
   type: GET_MISSIONS,
   payload: id,
 });
@@ -38,19 +38,20 @@ export const leaveMission = (id) => ({
 
 export default missions;
 
-const url = 'https://api.spacexdata.com/v3/missions';
+const url = 'https://api.spacexdata.com/v3';
 
 export const getMissions = () => async (dispatch) => {
-  const response = await fetch(url);
+  const response = await fetch(`${url}/missions`);
   const missions = await response.json();
   const formatMissions = missions.map((e) => {
     const obj = {
       mission_id: e.mission_id,
       mission_name: e.mission_name,
       description: e.description,
+      wikipedia: e.wikipedia,
       reserved: false,
     };
     return obj;
   });
-  dispatch(getMissionsSuccess(formatMissions));
+  dispatch(getMission(formatMissions));
 };
