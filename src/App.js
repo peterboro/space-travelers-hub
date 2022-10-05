@@ -7,7 +7,7 @@ import { fetchRocketsThunk } from './redux/rockets/rockets';
 import { fetchDragons } from './redux/dragons/dragons';
 import Header from './components/Header/Header';
 import RocketsView from './components/RocketsView/RocketsView';
-import MissionsView from './components/MissionsView/MissionsView';
+import Mission from './components/Mission/Mission';
 import DragonsView from './components/DragonsView/DragonsView';
 import MyProfile from './components/MyProfile/MyProfile';
 
@@ -33,7 +33,7 @@ const App = () => {
         </Route>
         <Route
           path="/missions"
-          element={<MissionsView />}
+          element={<Mission />}
         >
           Rockets
         </Route>
