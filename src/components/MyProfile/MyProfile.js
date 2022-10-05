@@ -5,6 +5,8 @@ import style from './MyProfile.module.scss';
 
 const MyProfile = () => {
   const rockets = useSelector((state) => state.rockets.list).filter((rocket) => rocket.reserved);
+  const missions = useSelector((state) => state.missions);
+  const reservedMissions = missions.filter((mission) => mission.reserved);
   const dispatch = useDispatch();
 
   return (
@@ -12,8 +14,11 @@ const MyProfile = () => {
       <div className={style.category}>
         <h2>My Missions</h2>
         <ul>
-          <li>Mission 1</li>
-          <li>Mission 2</li>
+          { reservedMissions.map((mission) => (
+            <li key={mission.mission_id}>
+              <span>{mission.mission_name}</span>
+            </li>
+          ))}
         </ul>
       </div>
       <div className={style.category}>
