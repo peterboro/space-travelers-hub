@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
-import store from '../../redux/configureStore';
-import MissionsView from './MissionsView';
+import store from '../../../redux/configureStore';
+import MissionsView from '../MissionsView';
 
 describe('Mission Component', () => {
   it('Does the mission render correctly?', () => {
