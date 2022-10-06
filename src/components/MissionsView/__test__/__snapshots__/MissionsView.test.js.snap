@@ -15,9 +15,9 @@ exports[`Mission Component Does the mission render correctly? 1`] = `
   </td>
   <td>
     <span
-      className="badge rounded-pill bg-primary"
+      className="badge bg-badge rounded-pill bg-primary"
     >
-      Not a Member
+      Not A Member
     </span>
   </td>
   <td>

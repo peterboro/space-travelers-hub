@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Badge } from 'react-bootstrap';
 import { joinMission, leaveMission } from '../../redux/missions/missions';
 
 const MissionsView = ({
@@ -8,17 +9,17 @@ const MissionsView = ({
 }) => {
   const dispatch = useDispatch();
 
+  const badge = status
+    ? { style: 'badge rounded-pill bg-success', text: 'Active Member' }
+    : { style: 'badge rounded-pill bg-primary', text: 'Not A Member' };
+
   return (
     <>
       <tr key={id}>
         <th scope="row" className="text-dark">{name}</th>
         <td className="w-50 text-dark">{description}</td>
         <td>
-          {
-            status
-              ? <span className="badge rounded-pill bg-success">Active Member</span>
-              : <span className="badge rounded-pill bg-primary">Not a Member</span>
-          }
+          <Badge bg={badge.style}>{badge.text}</Badge>
         </td>
         <td>
           {
