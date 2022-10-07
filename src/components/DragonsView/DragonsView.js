@@ -17,7 +17,7 @@ const DragonsView = () => {
     />
   ));
   return (
-    <div>{ displayDragons }</div>
+    <section data-testid="dragons-container">{ displayDragons }</section>
   );
 };
 

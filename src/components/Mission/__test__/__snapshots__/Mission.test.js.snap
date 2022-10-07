@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does it render correctly? 1`] = `
+<section
+  className="missions-container"
+  data-testid="missions"
+>
+  <table>
+    <thead>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th>
+         
+      </th>
+    </thead>
+    <tbody />
+  </table>
+</section>
+`;

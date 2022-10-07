@@ -2,26 +2,34 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { unbookRocket } from '../../redux/rockets/rockets';
 import { unbookDragon } from '../../redux/dragons/dragons';
+import { leaveMission } from '../../redux/missions/missions';
 import style from './MyProfile.module.scss';
 
 const MyProfile = () => {
   const rockets = useSelector((state) => state.rockets.list).filter((rocket) => rocket.reserved);
-  const missions = useSelector((state) => state.missions);
+  const missions = useSelector((state) => state.missions.list);
   const reservedMissions = missions.filter((mission) => mission.reserved);
   const dragons = useSelector((state) => state.dragons.list).filter((dragon) => dragon.reserved);
   const dispatch = useDispatch();
 
   return (
-    <section className={style.profile}>
+    <section className={style.profile} data-testid="myprofile">
       <div className={style.category}>
         <h2>My Missions</h2>
         <ul>
-          { reservedMissions.map((mission) => (
-            <li key={mission.mission_id}>
-              <span>{mission.mission_name}</span>
+          { reservedMissions.length ? reservedMissions.map((mission) => (
+            <li key={mission.id}>
+              <span>{mission.name}</span>
+              <button
+                type="button"
+                className={style['btn-unreserve']}
+                onClick={() => dispatch(leaveMission(mission.id))}
+              >
+                Cancel Reservation
+              </button>
               <a href={mission.wikipedia} className={style['btn-more']}>More</a>
             </li>
-          ))}
+          )) : <li>There is no booked mission</li> }
         </ul>
       </div>
       <div className={style.category}>

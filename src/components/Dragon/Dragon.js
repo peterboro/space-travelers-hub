@@ -10,7 +10,7 @@ const Dragon = (props) => {
   } = props;
   const dispatch = useDispatch();
   return (
-    <div key={id} className={style['dragon-container']}>
+    <article key={id} className={style['dragon-container']}>
       <img className={style['dragon-image']} src={img} alt="Dragon" />
       <div className={style['name-type-container']}>
         { reserved ? (<button type="button" className={style['reserved-tag']}>Reserved</button>) : ''}
@@ -24,7 +24,7 @@ const Dragon = (props) => {
         }
 
       </div>
-    </div>
+    </article>
   );
 };
 

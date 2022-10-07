@@ -12,6 +12,15 @@
   margin: 0 1rem;
 }
 
+.nav ul li:nth-child(3) {
+  border-right: 0.1rem solid black;
+  padding-right: 1rem;
+}
+
+.nav ul li:nth-child(4) {
+  margin-left: 0;
+}
+
 .nav ul li a {
   font-size: 0.8rem;
   color: $linkBlue;

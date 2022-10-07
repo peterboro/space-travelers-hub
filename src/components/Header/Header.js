@@ -3,7 +3,7 @@ import Navigation from '../Navigation/Navigation';
 import style from './Header.module.scss';
 
 const Header = () => (
-  <header>
+  <header data-testid="header">
     <a href="/" className={style.logo}>
       <img
         src={`${process.env.PUBLIC_URL}images/logo.png`}

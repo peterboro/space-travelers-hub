@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { joinMission, leaveMission } from '../../redux/missions/missions';
+import style from './MissionsView.module.scss';
 
 const MissionsView = ({
   id, name, description, status,
@@ -11,32 +12,30 @@ const MissionsView = ({
   return (
     <>
       <tr key={id}>
-        <th scope="row" className="text-dark">{name}</th>
-        <td className="w-50 text-dark">{description}</td>
+        <td className={style.title}>{name}</td>
+        <td className={style.description}>{description}</td>
         <td>
-          {
-            status
-              ? <span className="badge rounded-pill bg-success">Active Member</span>
-              : <span className="badge rounded-pill bg-primary">Not a Member</span>
-          }
+          <span className={`${style.badge} ${style[status ? 'member' : 'not-member']}`}>
+            { status ? 'Active Member' : 'Not A Member' }
+          </span>
         </td>
         <td>
           {
             status
               ? (
                 <button
-                  type="button"
-                  className="btn btn-outline-warning btn-sm"
+                  className={style['btn-leave']}
                   onClick={() => dispatch(leaveMission(id))}
+                  type="button"
                 >
-                  Leave mission
+                  Leave Mission
                 </button>
               )
               : (
                 <button
-                  type="button"
-                  className="btn btn-outline-primary btn-sm"
+                  className={style['btn-join']}
                   onClick={() => dispatch(joinMission(id))}
+                  type="button"
                 >
                   Join Mission
                 </button>

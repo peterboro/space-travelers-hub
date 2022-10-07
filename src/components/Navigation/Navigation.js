@@ -6,7 +6,7 @@ const Navigation = () => {
   const activeStyle = { textDecoration: 'underline' };
 
   return (
-    <nav className={style.nav}>
+    <nav className={style.nav} data-testid="navbar">
       <ul>
         <li>
           <NavLink

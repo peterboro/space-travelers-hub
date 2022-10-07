@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component matches snapshot 1`] = `
+<header
+  data-testid="header"
+>
+  <a
+    className="logo"
+    href="/"
+  >
+    <img
+      alt="Space travelers hub logo"
+      src="images/logo.png"
+    />
+    <h1>
+      Space Travelers Hub
+    </h1>
+  </a>
+  <nav
+    className="nav"
+    data-testid="navbar"
+  >
+    <ul>
+      <li>
+        <a
+          className=""
+          href="/rockets"
+          onClick={[Function]}
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/dragons"
+          onClick={[Function]}
+        >
+          Dragons
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/myprofile"
+          onClick={[Function]}
+        >
+          Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
