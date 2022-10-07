@@ -16,12 +16,12 @@ const MyProfile = () => {
       <div className={style.category}>
         <h2>My Missions</h2>
         <ul>
-          { reservedMissions.map((mission) => (
+          { reservedMissions.length ? reservedMissions.map((mission) => (
             <li key={mission.mission_id}>
               <span>{mission.mission_name}</span>
               <a href={mission.wikipedia} className={style['btn-more']}>More</a>
             </li>
-          ))}
+          )) : <li>There is no booked mission</li> }
         </ul>
       </div>
       <div className={style.category}>

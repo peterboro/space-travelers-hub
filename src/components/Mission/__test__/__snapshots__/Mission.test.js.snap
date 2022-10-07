@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Does it render correctly? 1`] = `
+Array [
+  <br />,
+  <div
+    className="headContainer"
+  >
+    <div
+      className="table-responsive"
+    >
+      <table
+        className="table table-striped"
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              Mission
+            </th>
+            <th
+              scope="col"
+            >
+              Description
+            </th>
+            <th
+              scope="col"
+            >
+              Status
+            </th>
+            <th
+              scope="col"
+            >
+              Join
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
+  </div>,
+]
+`;
