@@ -38,15 +38,11 @@ In order to obtain a local copy of this repository run:
 
 ## Live Demo
 
-[Live Demo Link](https://deploy-preview-29--space-travellers-hub-desta-eva-peter.netlify.app/)
+[Live Demo Link](https://deploy-preview-33--space-travellers-hub-desta-eva-peter.netlify.app/)
 
 ## Live Preview
 
 ![Live Preview](https://i.postimg.cc/RhPr7nqj/Screenshot-from-2022-10-05-12-01-35.png)
-
-<!-- ## Project video -->
-
-<!-- [A video presentation of the project](https://streamable.com/8n3oyt) -->
 
 ## Authors
 
