@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rocket component matches snapshot 1`] = `
+<article
+  className="rocket"
+  data-id={1}
+  data-name="Falcon 1"
+>
+  <img
+    alt="The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth."
+    src="https://imgur.com/DaCfMsj.jpg"
+  />
+  <div
+    className="rocket-info"
+  >
+    <h2
+      className="title"
+    >
+      Falcon 1
+    </h2>
+    <p
+      className="description"
+    >
+       
+      The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.
+    </p>
+    <button
+      className="btn-reserve"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve Rocket
+    </button>
+  </div>
+</article>
+`;

@@ -12,7 +12,7 @@ const MyProfile = () => {
   const dispatch = useDispatch();
 
   return (
-    <section className={style.profile}>
+    <section className={style.profile} data-testid="myprofile">
       <div className={style.category}>
         <h2>My Missions</h2>
         <ul>
