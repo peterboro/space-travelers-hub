@@ -1,0 +1,53 @@
+@import '../../styles/variables';
+
+.rocket {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.rocket img {
+  width: 20%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  font-family: $montserrat;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+button {
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.btn-reserve {
+  background-color: $primaryBtnBlue;
+  padding: 0.6rem 1rem;
+  border: none;
+  color: $white;
+}
+
+.btn-unreserve {
+  background-color: $white;
+  padding: 0.4rem 1.8rem;
+  border: 0.1rem solid $gray;
+  color: $gray;
+}
+
+.reserved-tag {
+  padding: 0.1rem;
+  background-color: $reservedTag;
+  color: $white;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+}

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RocketsView component matches snapshot 1`] = `
+<section
+  className="rockets-container"
+  data-testid="rockets-container"
+>
+  <ul
+    className="rockets-list"
+  >
+    <div
+      className="loader"
+    >
+      <img
+        alt="Spinning loader"
+        src="images/spinner.gif"
+      />
+      <p>
+        Data is currently loading. Please wait...
+      </p>
+    </div>
+  </ul>
+</section>
+`;

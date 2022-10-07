@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import {
+  BrowserRouter as Router, Routes, Route, Navigate,
+} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { fetchRocketsThunk } from './redux/rockets/rockets';
+import { fetchDragons } from './redux/dragons/dragons';
+import Header from './components/Header/Header';
+import RocketsView from './components/RocketsView/RocketsView';
+import Mission from './components/Mission/Mission';
+import DragonsView from './components/DragonsView/DragonsView';
+import MyProfile from './components/MyProfile/MyProfile';
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRocketsThunk());
+    dispatch(fetchDragons());
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Router>
+      <Header />
+
+      <Routes>
+        <Route
+          path="/rockets"
+          index
+          element={<RocketsView />}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Rockets
+        </Route>
+        <Route
+          path="/missions"
+          element={<Mission />}
+        >
+          Rockets
+        </Route>
+        <Route
+          path="/dragons"
+          element={<DragonsView />}
+        >
+          Rockets
+        </Route>
+        <Route
+          path="/myprofile"
+          element={<MyProfile />}
+        >
+          My Profile
+        </Route>
+        <Route
+          path="/"
+          element={<Navigate to="/rockets" />}
+        />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

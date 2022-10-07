@@ -1,0 +1,46 @@
+@import '../../styles/variables';
+
+.title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  vertical-align: top;
+}
+
+.description {
+  font-size: 1rem;
+  padding-bottom: 1.6rem;
+}
+
+.badge {
+  padding: 0.3rem;
+  color: $white;
+  font-size: 0.8rem;
+  border-radius: 0.2rem;
+  white-space: nowrap;
+}
+
+.not-member {
+  background-color: #6c757d;
+  text-transform: uppercase;
+}
+
+.member {
+  background-color: $reservedTag;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  white-space: nowrap;
+  border: none;
+  background-color: transparent;
+}
+
+.btn-join {
+  color: #6c757d;
+  border: 0.1rem solid #6c757d;
+}
+
+.btn-leave {
+  color: #f0899b;
+  border: 0.1rem solid #f0899b;
+}
