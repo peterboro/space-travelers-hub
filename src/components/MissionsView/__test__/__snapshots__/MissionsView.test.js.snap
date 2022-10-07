@@ -2,27 +2,26 @@
 
 exports[`Mission Component Does the mission render correctly? 1`] = `
 <tr>
-  <th
-    className="text-dark"
-    scope="row"
+  <td
+    className="title"
   >
     Iridium NEXT
-  </th>
+  </td>
   <td
-    className="w-50 text-dark"
+    className="description"
   >
     A tertiary payload on 58 satellites is a marine AIS ship-tracker receiver, for Canadian company exactEarth Ltd
   </td>
   <td>
     <span
-      className="badge bg-badge rounded-pill bg-primary"
+      className="badge not-member"
     >
       Not A Member
     </span>
   </td>
   <td>
     <button
-      className="btn btn-outline-primary btn-sm"
+      className="btn-join"
       onClick={[Function]}
       type="button"
     >

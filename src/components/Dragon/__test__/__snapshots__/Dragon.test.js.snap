@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragon component matches snapshot 1`] = `
+<article
+  className="dragon-container"
+>
+  <img
+    alt="Dragon"
+    className="dragon-image"
+    src="https://farm8.staticflickr.com/7647/16581815487_6d56cb32e1_b.jpg"
+  />
+  <div
+    className="name-type-container"
+  >
+    <p
+      className="name"
+    >
+      Dragon 1
+    </p>
+    <p
+      className="type"
+    >
+      capsule
+    </p>
+    <button
+      className="btn-reserve"
+      onClick={[Function]}
+      type="button"
+    >
+      Reserve
+    </button>
+  </div>
+</article>
+`;

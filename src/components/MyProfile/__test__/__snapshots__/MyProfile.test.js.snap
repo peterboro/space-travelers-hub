@@ -11,7 +11,11 @@ exports[`MyProfile component matches snapshot 1`] = `
     <h2>
       My Missions
     </h2>
-    <ul />
+    <ul>
+      <li>
+        There is no booked mission
+      </li>
+    </ul>
   </div>
   <div
     className="category"

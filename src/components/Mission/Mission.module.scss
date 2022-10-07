@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+
+table {
+  background-color: #dee2e6;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: $white;
+}
+
+thead {
+  background-color: $white;
+}
+
+td {
+  padding: 0.5rem;
+}
+
+thead th {
+  text-align: left;
+  padding: 0.4rem;
+  font-size: 1.2rem;
+}

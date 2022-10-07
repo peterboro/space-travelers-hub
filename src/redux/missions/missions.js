@@ -1,57 +1,68 @@
-const GET_MISSIONS = 'spacetravelers/missions/missions';
-const JOIN_MISSION = 'spacetravelers/missions/joinMission';
-const LEAVE_MISSION = 'spacetravelers/missions/leaveMission';
-const initialState = [];
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const missions = (state = initialState, action) => {
-  switch (action.type) {
-    case GET_MISSIONS:
-      return [...action.payload];
-    case JOIN_MISSION:
-      return [
-        ...state.map((mission) => (mission.mission_id !== action.payload
-          ? mission : { ...mission, reserved: true }))];
-    case LEAVE_MISSION:
-      return [
-        ...state.map((mission) => (mission.mission_id !== action.payload
-          ? mission : { ...mission, reserved: false })),
-      ];
-    default:
-      return state;
-  }
-};
+const API_BASE_URL = 'https://api.spacexdata.com/v3';
 
-export const getMission = (id) => ({
-  type: GET_MISSIONS,
-  payload: id,
+export const fetchMissionsThunk = createAsyncThunk('missions/fetch', async () => {
+  const response = await fetch(`${API_BASE_URL}/missions`);
+  const result = await response.json();
+
+  return result;
 });
 
-export const joinMission = (id) => ({
-  type: JOIN_MISSION,
-  payload: id,
+const missionsSlice = createSlice({
+  name: 'missions',
+  initialState: {
+    loading: false,
+    list: [],
+    error: '',
+  },
+  reducers: {
+    joinMission: (state, action) => ({
+      ...state,
+      list: state.list.map((mission) => {
+        if (mission.id === action.payload) {
+          return {
+            ...mission,
+            reserved: true,
+          };
+        }
+
+        return mission;
+      }),
+    }),
+    leaveMission: (state, action) => ({
+      ...state,
+      list: state.list.map((mission) => {
+        if (mission.id === action.payload) {
+          return {
+            ...mission,
+            reserved: false,
+          };
+        }
+
+        return mission;
+      }),
+    }),
+  },
+  extraReducers: (builder) => {
+    builder.addCase(fetchMissionsThunk.pending, (state) => ({ ...state, loading: true }));
+    builder.addCase(fetchMissionsThunk.fulfilled, (state, action) => (
+      {
+        ...state,
+        loading: false,
+        list: action.payload.map((mission) => ({
+          id: mission.mission_id,
+          name: mission.mission_name,
+          description: mission.description,
+          wikipedia: mission.wikipedia,
+          reserved: false,
+        })),
+      }));
+    builder.addCase(fetchMissionsThunk.rejected, (state, action) => (
+      { ...state, loading: false, error: action.payload }
+    ));
+  },
 });
 
-export const leaveMission = (id) => ({
-  type: LEAVE_MISSION,
-  payload: id,
-});
-
-export default missions;
-
-const url = 'https://api.spacexdata.com/v3';
-
-export const getMissions = () => async (dispatch) => {
-  const response = await fetch(`${url}/missions`);
-  const missions = await response.json();
-  const formatMissions = missions.map((e) => {
-    const obj = {
-      mission_id: e.mission_id,
-      mission_name: e.mission_name,
-      description: e.description,
-      wikipedia: e.wikipedia,
-      reserved: false,
-    };
-    return obj;
-  });
-  dispatch(getMission(formatMissions));
-};
+export default missionsSlice.reducer;
+export const { joinMission, leaveMission } = missionsSlice.actions;
