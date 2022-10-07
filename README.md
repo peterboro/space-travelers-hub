@@ -30,7 +30,7 @@ In order to obtain a local copy of this repository run:
 
 ### Running the project locally
 
-- You can run this project locally (localhost), after cloning the repository, by running `npm run start`
+- You can run this project locally (localhost), after cloning the repository, by running `npm start`
 
 ### Running tests
 
